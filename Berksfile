@@ -7,7 +7,10 @@ solver :ruby, :required
   -common
   -identity
   -image
+  -integration-test
   -network
+  -ops-database
+  -ops-messaging
 ).each do |cookbook|
   if Dir.exist?("../cookbook-openstack#{cookbook}")
     cookbook "openstack#{cookbook}", path: "../cookbook-openstack#{cookbook}"
